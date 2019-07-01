@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package stream;
+
+service Stream {
+  rpc Do(Empty) returns (stream Pong) {};
+}
+
+message Empty{}
+
+message Pong {
+  string message = 1;
+}
